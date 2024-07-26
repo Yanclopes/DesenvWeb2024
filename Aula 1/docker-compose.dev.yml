@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/var/www/html
+    ports:
+      - 8080:80
+    environment:
+      - VIRTUAL_HOST=localhost
+      - APP_ENV=dev
