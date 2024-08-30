@@ -4,7 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabela de Notas</title>
+    <script src="script.js"></script>
     <style>
+        body {
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+        }
+        div {
+            display: flex;
+            justify-content: center;
+            gap: 10px
+        }
         table {
             width: 100%;
             border-collapse: collapse;
@@ -23,7 +34,7 @@
     </style>
 </head>
 <body>
-    <table>
+    <table id="myTable">
         <thead>
             <tr>
                 <th rowspan="2">Aluno</th>
@@ -44,7 +55,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
+            <tr class="line">
                 <td>João</td>
                 <td>10</td>
                 <td>8</td>
@@ -56,67 +67,71 @@
                 <td>7</td>
                 <td>9</td>
             </tr>
-            <tr>
+            <tr class="line">
                 <td>Maria</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>10</td>
+                <td>8</td>
+                <td>9</td>
+                <td>6</td>
+                <td>8,7</td>
+                <td>10</td>
+                <td>6</td>
+                <td>7</td>
+                <td>9</td>
             </tr>
-            <tr>
+            <tr class="line">
                 <td>José</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>10</td>
+                <td>8</td>
+                <td>9</td>
+                <td>6</td>
+                <td>8,7</td>
+                <td>10</td>
+                <td>6</td>
+                <td>7</td>
+                <td>9</td>
             </tr>
-            <tr>
+            <tr class="line">
                 <td>Paulo</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>10</td>
+                <td>8</td>
+                <td>9</td>
+                <td>6</td>
+                <td>8,7</td>
+                <td>10</td>
+                <td>6</td>
+                <td>7</td>
+                <td>9</td>
             </tr>
-            <tr>
+            <tr class="line">
                 <td>Miguel</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>10</td>
+                <td>8</td>
+                <td>9</td>
+                <td>6</td>
+                <td>8,7</td>
+                <td>10</td>
+                <td>6</td>
+                <td>7</td>
+                <td>9</td>
             </tr>
-            <tr>
+            <tr class="line">
                 <td>Julia</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>10</td>
+                <td>8</td>
+                <td>9</td>
+                <td>6</td>
+                <td>8,7</td>
+                <td>10</td>
+                <td>6</td>
+                <td>7</td>
+                <td>9</td>
             </tr>
         </tbody>
     </table>
+    <div>
+        <button onclick="calcularMediaAluno()">Calcular media dos alunos</button>
+        <button onclick="calcularMediaNotas()">Calcular media das notas</button>
+    </div>
 </body>
 </html>
